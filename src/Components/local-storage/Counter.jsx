@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { getItem, setItem } from "./localStorage";
+import { UserContext } from "../user-protected-route/UserContext";
 
 const Counter = () => {
   const [count, setCount] = useState(() => {
@@ -14,6 +15,8 @@ const Counter = () => {
     setCount((pre) => pre + 1);
     setItem("count", count + 1);
   };
+
+  const { loggedIn } = useContext(UserContext);
 
   return (
     <div>

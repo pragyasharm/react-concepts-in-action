@@ -5,7 +5,6 @@ import { useParams } from "react-router-dom";
 
 const PostPage = () => {
   const { id } = useParams();
-  console.log(id);
 
   const fetchPost = async () => {
     const { data } = await axios.get(
@@ -27,7 +26,6 @@ const PostPage = () => {
 
   if (isLoading) return <div>Loading.....</div>;
   if (isError) return <div>Error: {error.message}</div>;
-  console.log(postData);
 
   return (
     <div>

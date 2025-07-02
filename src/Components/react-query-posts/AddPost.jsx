@@ -43,10 +43,6 @@ const AddPost = () => {
     setTitle("");
   };
 
-  useEffect(() => {
-    console.log("isLoading state:", isLoading); // ✅ This should now work
-  }, [isLoading]);
-
   return (
     <div>
       <form onSubmit={handleSubmit}>

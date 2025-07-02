@@ -10,13 +10,10 @@ const ProductList = () => {
   const fetchProducts = async (page, searchProducts) => {
     const limit = 10;
     const skip = (page - 1) * limit;
-    console.log("Search products of ", searchProducts);
 
     const url = searchProducts
       ? `https://dummyjson.com/products/search?q=${searchProducts}&limit=${limit}&skip=${skip}`
       : `https://dummyjson.com/products?limit=${limit}&skip=${skip}`;
-
-    console.log("URL data", url);
 
     const { data } = await axios.get(url);
     return data;
