@@ -16,21 +16,24 @@ import ProductList from "./Components/product-list-pagination/ProductList.jsx";
 import Counter from "./Components/local-storage/Counter.jsx";
 
 const queryClient = new QueryClient();
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    children: [
-      { index: true, element: <PostsList /> },
-      { path: "post/:id", element: <PostPage /> },
-      { path: "add-post", element: <AddPost /> },
-      { path: "test-post", element: <TestMutation /> },
-      { path: "infinite-scroll", element: <InfiniteScroll /> },
-      { path: "product-list", element: <ProductList /> },
-      { path: "counter-local", element: <Counter /> },
-    ],
-  },
-]);
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <App />,
+      children: [
+        { index: true, element: <PostsList /> },
+        { path: "post/:id", element: <PostPage /> },
+        { path: "add-post", element: <AddPost /> },
+        { path: "test-post", element: <TestMutation /> },
+        { path: "infinite-scroll", element: <InfiniteScroll /> },
+        { path: "product-list", element: <ProductList /> },
+        { path: "counter-local", element: <Counter /> },
+      ],
+    },
+  ],
+  { basename: "/react-concepts-in-action" }
+);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
