@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { UserContext } from "./user-protected-route/UserContext";
 
@@ -19,12 +19,12 @@ const Header = () => {
   return (
     <>
       <nav className="navbar">
-        <Link to="/">Home</Link>
-        <Link to="/add-post">Add post</Link>
-        <Link to="/infinite-scroll">Infinite scroll</Link>
-        <Link to="/counter-local">Counter local</Link>
-        <Link to="/product-list">Product List - paginaion</Link>
-        <Link to="/profile">Profile</Link>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/add-post">Add post</NavLink>
+        <NavLink to="/infinite-scroll">Infinite scroll</NavLink>
+        <NavLink to="/counter-local">Counter local</NavLink>
+        <NavLink to="/product-list">Product List - paginaion</NavLink>
+        <NavLink to="/profile">Profile</NavLink>
         {loggedIn ? (
           <button onClick={handleLogout}>Logout</button>
         ) : (
