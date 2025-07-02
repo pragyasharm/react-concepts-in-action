@@ -1,7 +1,10 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
+  max-width: 900px;
+  margin: 2rem auto;
   padding: 2rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
 }
 
 .logo {
@@ -32,10 +35,55 @@
   }
 }
 
+.navbar {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.navbar a {
+  color: #213547; /* Even darker for nav links */
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #fff;
+  background: #646cff;
+}
+
 .card {
   padding: 2em;
 }
 
+.card-block {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  margin-bottom: 2rem;
+  color: #222; /* Darker text for better contrast */
+}
+
 .read-the-docs {
   color: #888;
+}
+
+@media (max-width: 600px) {
+  #root {
+    padding: 1rem;
+  }
+  .navbar {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .card-block {
+    padding: 1rem;
+  }
 }

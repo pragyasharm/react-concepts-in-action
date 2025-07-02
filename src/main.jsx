@@ -13,6 +13,7 @@ import TestMutation from "./TestMutation.jsx";
 import { ErrorBoundary } from "react-error-boundary";
 import InfiniteScroll from "./Components/infinite-scroll/InfiniteScroll.jsx";
 import ProductList from "./Components/product-list-pagination/ProductList.jsx";
+import Counter from "./Components/local-storage/Counter.jsx";
 
 const queryClient = new QueryClient();
 const router = createBrowserRouter([
@@ -26,6 +27,7 @@ const router = createBrowserRouter([
       { path: "test-post", element: <TestMutation /> },
       { path: "infinite-scroll", element: <InfiniteScroll /> },
       { path: "product-list", element: <ProductList /> },
+      { path: "counter-local", element: <Counter /> },
     ],
   },
 ]);
