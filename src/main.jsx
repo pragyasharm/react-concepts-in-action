@@ -16,6 +16,7 @@ import { UserProvider } from "./Components/user-protected-route/UserContext.jsx"
 import UserProtectedRoutes from "./Components/user-protected-route/UserProtectedRoutes.jsx";
 import Profile from "./Components/user-protected-route/Profile.jsx";
 import Login from "./Components/Login.jsx";
+import DataList from "./Components/useHook/DataList.jsx";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +33,7 @@ const router = createHashRouter([
       { path: "product-list", element: <ProductList /> },
       { path: "counter-local", element: <Counter /> },
       { path: "login", element: <Login /> },
+      { path: "posts", element: <DataList /> },
       {
         element: <UserProtectedRoutes />,
         children: [

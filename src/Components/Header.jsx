@@ -25,6 +25,7 @@ const Header = () => {
         <NavLink to="/counter-local">Counter local</NavLink>
         <NavLink to="/product-list">Product List - paginaion</NavLink>
         <NavLink to="/profile">Profile</NavLink>
+        <NavLink to="/posts">Posts-custom hook</NavLink>
         {loggedIn ? (
           <button onClick={handleLogout}>Logout</button>
         ) : (
